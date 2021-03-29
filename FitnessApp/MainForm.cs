@@ -73,6 +73,21 @@ namespace FitnessApp
                     Fat_Reduction_Page.BringToFront();
                 }
             }
+            else if (window_flag == 2)
+            {
+                var Mass = new Mass();
+
+                if (!Panel_body.Contains(Mass.Instance))
+                {
+                    Panel_body.Controls.Add(Mass.Instance);
+                    Mass.Instance.Dock = DockStyle.Fill;
+                    Mass.Instance.BringToFront();
+                }
+                else
+                {
+                    Mass.BringToFront();
+                }
+            }
         }
 
         public MainForm()
@@ -113,25 +128,34 @@ namespace FitnessApp
 
         private void Panel_navigate_Paint(object sender, PaintEventArgs e)
         {
-            Point startPoint = new Point(0, 0);
+            /*Point startPoint = new Point(0, 0);
             Point endPoint = new Point(150, 150);
 
             LinearGradientBrush lgb =
                 new LinearGradientBrush(startPoint, endPoint, Color.FromArgb(255, 100, 0, 0), Color.FromArgb(255, 20, 15, 0));
             Graphics g = e.Graphics;
-            g.FillRectangle(lgb, 0, 0, Panel_navigate.Width, Panel_navigate.Height);
+            g.FillRectangle(lgb, 0, 0, Panel_navigate.Width, Panel_navigate.Height);*/
         }
 
         private void Button_home_Click(object sender, EventArgs e)
         {
             window_flag = 0;
             Change_window();
+            ActiveControl = Panel_navigate;
         }
 
         private void Button_fat_reduction_Click(object sender, EventArgs e)
         {
             window_flag = 1;
             Change_window();
+            ActiveControl = Panel_navigate;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            window_flag = 2;
+            Change_window();
+            ActiveControl = Panel_navigate;
         }
     }
 }

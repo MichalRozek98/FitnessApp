@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mass.Designer.cs">
+      <DependentUpon>Mass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fat_Reduction.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Mass.resx">
+      <DependentUpon>Mass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fat_Reduction.resx">
       <DependentUpon>Fat_Reduction.cs</DependentUpon>
     </EmbeddedResource>
