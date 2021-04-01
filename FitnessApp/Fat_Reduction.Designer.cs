@@ -55,6 +55,11 @@
             this.textBox_age = new System.Windows.Forms.TextBox();
             this.textBox_height = new System.Windows.Forms.TextBox();
             this.textBox_weight = new System.Windows.Forms.TextBox();
+            this.button_10 = new System.Windows.Forms.Button();
+            this.button_del = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel_body_reduction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_type)).BeginInit();
             this.SuspendLayout();
@@ -80,6 +85,11 @@
             // 
             // panel_body_reduction
             // 
+            this.panel_body_reduction.Controls.Add(this.label3);
+            this.panel_body_reduction.Controls.Add(this.label2);
+            this.panel_body_reduction.Controls.Add(this.label1);
+            this.panel_body_reduction.Controls.Add(this.button_del);
+            this.panel_body_reduction.Controls.Add(this.button_10);
             this.panel_body_reduction.Controls.Add(this.pictureBox_type);
             this.panel_body_reduction.Controls.Add(this.label_result);
             this.panel_body_reduction.Controls.Add(this.label_activity);
@@ -126,7 +136,7 @@
             // 
             this.label_result.AutoSize = true;
             this.label_result.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_result.Location = new System.Drawing.Point(9, 462);
+            this.label_result.Location = new System.Drawing.Point(75, 502);
             this.label_result.Name = "label_result";
             this.label_result.Size = new System.Drawing.Size(64, 17);
             this.label_result.TabIndex = 26;
@@ -189,7 +199,7 @@
             this.button_count.FlatAppearance.BorderSize = 0;
             this.button_count.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_count.ForeColor = System.Drawing.Color.White;
-            this.button_count.Location = new System.Drawing.Point(170, 379);
+            this.button_count.Location = new System.Drawing.Point(119, 431);
             this.button_count.Name = "button_count";
             this.button_count.Size = new System.Drawing.Size(75, 23);
             this.button_count.TabIndex = 20;
@@ -199,9 +209,13 @@
             // 
             // textBox_result
             // 
-            this.textBox_result.Location = new System.Drawing.Point(79, 461);
+            this.textBox_result.BackColor = System.Drawing.Color.White;
+            this.textBox_result.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_result.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox_result.Location = new System.Drawing.Point(145, 500);
             this.textBox_result.Name = "textBox_result";
-            this.textBox_result.Size = new System.Drawing.Size(135, 20);
+            this.textBox_result.ReadOnly = true;
+            this.textBox_result.Size = new System.Drawing.Size(135, 22);
             this.textBox_result.TabIndex = 19;
             // 
             // button_0
@@ -212,13 +226,12 @@
             this.button_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_0.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_0.ForeColor = System.Drawing.Color.White;
-            this.button_0.Location = new System.Drawing.Point(67, 362);
+            this.button_0.Location = new System.Drawing.Point(133, 361);
             this.button_0.Name = "button_0";
             this.button_0.Size = new System.Drawing.Size(40, 40);
             this.button_0.TabIndex = 18;
             this.button_0.Text = "0";
             this.button_0.UseVisualStyleBackColor = false;
-            this.button_0.Click += new System.EventHandler(this.button_0_Click);
             // 
             // button_3
             // 
@@ -228,7 +241,7 @@
             this.button_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_3.ForeColor = System.Drawing.Color.White;
-            this.button_3.Location = new System.Drawing.Point(127, 306);
+            this.button_3.Location = new System.Drawing.Point(193, 305);
             this.button_3.Name = "button_3";
             this.button_3.Size = new System.Drawing.Size(40, 40);
             this.button_3.TabIndex = 17;
@@ -243,7 +256,7 @@
             this.button_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_2.ForeColor = System.Drawing.Color.White;
-            this.button_2.Location = new System.Drawing.Point(67, 306);
+            this.button_2.Location = new System.Drawing.Point(133, 305);
             this.button_2.Name = "button_2";
             this.button_2.Size = new System.Drawing.Size(40, 40);
             this.button_2.TabIndex = 16;
@@ -258,7 +271,7 @@
             this.button_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_1.ForeColor = System.Drawing.Color.White;
-            this.button_1.Location = new System.Drawing.Point(7, 306);
+            this.button_1.Location = new System.Drawing.Point(73, 305);
             this.button_1.Name = "button_1";
             this.button_1.Size = new System.Drawing.Size(40, 40);
             this.button_1.TabIndex = 15;
@@ -273,7 +286,7 @@
             this.button_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_9.ForeColor = System.Drawing.Color.White;
-            this.button_9.Location = new System.Drawing.Point(127, 194);
+            this.button_9.Location = new System.Drawing.Point(193, 193);
             this.button_9.Name = "button_9";
             this.button_9.Size = new System.Drawing.Size(40, 40);
             this.button_9.TabIndex = 14;
@@ -288,7 +301,7 @@
             this.button_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_8.ForeColor = System.Drawing.Color.White;
-            this.button_8.Location = new System.Drawing.Point(67, 194);
+            this.button_8.Location = new System.Drawing.Point(133, 193);
             this.button_8.Name = "button_8";
             this.button_8.Size = new System.Drawing.Size(40, 40);
             this.button_8.TabIndex = 13;
@@ -303,7 +316,7 @@
             this.button_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_7.ForeColor = System.Drawing.Color.White;
-            this.button_7.Location = new System.Drawing.Point(7, 194);
+            this.button_7.Location = new System.Drawing.Point(73, 193);
             this.button_7.Name = "button_7";
             this.button_7.Size = new System.Drawing.Size(40, 40);
             this.button_7.TabIndex = 12;
@@ -318,7 +331,7 @@
             this.button_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_6.ForeColor = System.Drawing.Color.White;
-            this.button_6.Location = new System.Drawing.Point(127, 250);
+            this.button_6.Location = new System.Drawing.Point(193, 249);
             this.button_6.Name = "button_6";
             this.button_6.Size = new System.Drawing.Size(40, 40);
             this.button_6.TabIndex = 11;
@@ -333,7 +346,7 @@
             this.button_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_4.ForeColor = System.Drawing.Color.White;
-            this.button_4.Location = new System.Drawing.Point(7, 250);
+            this.button_4.Location = new System.Drawing.Point(73, 249);
             this.button_4.Name = "button_4";
             this.button_4.Size = new System.Drawing.Size(40, 40);
             this.button_4.TabIndex = 10;
@@ -348,7 +361,7 @@
             this.button_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_5.ForeColor = System.Drawing.Color.White;
-            this.button_5.Location = new System.Drawing.Point(67, 250);
+            this.button_5.Location = new System.Drawing.Point(133, 249);
             this.button_5.Name = "button_5";
             this.button_5.Size = new System.Drawing.Size(40, 40);
             this.button_5.TabIndex = 9;
@@ -366,27 +379,94 @@
             // 
             // textBox_age
             // 
+            this.textBox_age.BackColor = System.Drawing.Color.White;
             this.textBox_age.Location = new System.Drawing.Point(420, 108);
             this.textBox_age.Name = "textBox_age";
+            this.textBox_age.ReadOnly = true;
             this.textBox_age.Size = new System.Drawing.Size(100, 20);
             this.textBox_age.TabIndex = 7;
             this.textBox_age.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_age_MouseClick);
             // 
             // textBox_height
             // 
+            this.textBox_height.BackColor = System.Drawing.Color.White;
             this.textBox_height.Location = new System.Drawing.Point(278, 108);
             this.textBox_height.Name = "textBox_height";
+            this.textBox_height.ReadOnly = true;
             this.textBox_height.Size = new System.Drawing.Size(100, 20);
             this.textBox_height.TabIndex = 6;
             this.textBox_height.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_height_MouseClick);
             // 
             // textBox_weight
             // 
+            this.textBox_weight.BackColor = System.Drawing.Color.White;
             this.textBox_weight.Location = new System.Drawing.Point(145, 108);
             this.textBox_weight.Name = "textBox_weight";
+            this.textBox_weight.ReadOnly = true;
             this.textBox_weight.Size = new System.Drawing.Size(100, 20);
             this.textBox_weight.TabIndex = 5;
             this.textBox_weight.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_weight_MouseClick);
+            // 
+            // button_10
+            // 
+            this.button_10.BackColor = System.Drawing.Color.Black;
+            this.button_10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_10.FlatAppearance.BorderSize = 0;
+            this.button_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_10.ForeColor = System.Drawing.Color.White;
+            this.button_10.Location = new System.Drawing.Point(73, 361);
+            this.button_10.Name = "button_10";
+            this.button_10.Size = new System.Drawing.Size(40, 40);
+            this.button_10.TabIndex = 28;
+            this.button_10.Text = ".";
+            this.button_10.UseVisualStyleBackColor = false;
+            // 
+            // button_del
+            // 
+            this.button_del.BackColor = System.Drawing.Color.Black;
+            this.button_del.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_del.FlatAppearance.BorderSize = 0;
+            this.button_del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_del.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_del.ForeColor = System.Drawing.Color.White;
+            this.button_del.Location = new System.Drawing.Point(193, 361);
+            this.button_del.Name = "button_del";
+            this.button_del.Size = new System.Drawing.Size(87, 40);
+            this.button_del.TabIndex = 29;
+            this.button_del.Text = "del";
+            this.button_del.UseVisualStyleBackColor = false;
+            this.button_del.Click += new System.EventHandler(this.button_del_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(458, 347);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 17);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Ektomofrik";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(586, 347);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 17);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Mezomorfik";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(723, 347);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 17);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Endomorfik";
             // 
             // Fat_Reduction
             // 
@@ -431,5 +511,10 @@
         private System.Windows.Forms.Label label_result;
         private System.Windows.Forms.Label label_activity;
         private System.Windows.Forms.PictureBox pictureBox_type;
+        private System.Windows.Forms.Button button_del;
+        private System.Windows.Forms.Button button_10;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
